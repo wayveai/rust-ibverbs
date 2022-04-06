@@ -787,7 +787,6 @@ impl<'res> QueuePairBuilder<'res> {
 /// let host1end = host1.recv();
 /// let qp = pqp.handshake(host1end);
 /// ```
-#[derive(Clone)]
 pub struct PreparedQueuePair {
     ctx: Arc<Context>,
     qp: *mut ffi::ibv_qp,
