@@ -1160,7 +1160,7 @@ impl ProtectionDomain {
             ffi::ibv_reg_mr(
                 self.pd,
                 data.as_mut_ptr() as *mut _,
-                (n * mem::size_of::<T>()) as u64,
+                n * mem::size_of::<T>(),
                 access.0 as i32,
             )
         };
